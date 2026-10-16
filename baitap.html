@@ -1,0 +1,1970 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NOVA MOTORS – Định nghĩa lại trải nghiệm hạng sang</title>
+  <meta name="description" content="NOVA MOTORS – Showroom xe hạng sang. Khám phá SUV, Sedan và xe điện cao cấp mới nhất với công nghệ tiên tiến và thiết kế tinh tế." />
+  <meta property="og:title" content="NOVA MOTORS – Định nghĩa lại trải nghiệm hạng sang" />
+  <meta property="og:description" content="Công nghệ tiên tiến, thiết kế tinh tế và hiệu suất mạnh mẽ cho mọi hành trình." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --clr-bg: #0a0a0a;
+      --clr-surface: #111111;
+      --clr-surface2: #1a1a1a;
+      --clr-border: rgba(255,255,255,0.08);
+      --clr-white: #ffffff;
+      --clr-grey: #a0a0a0;
+      --clr-light: #d4d4d4;
+      --clr-accent: #c8a96e;      /* gold */
+      --clr-accent2: #8b7355;
+      --ff-display: 'Playfair Display', serif;
+      --ff-body: 'Inter', sans-serif;
+      --transition: 0.35s cubic-bezier(0.4,0,0.2,1);
+      --header-h: 80px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--clr-bg);
+      color: var(--clr-white);
+      font-family: var(--ff-body);
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+    /* ===== SCROLLBAR ===== */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--clr-bg); }
+    ::-webkit-scrollbar-thumb { background: var(--clr-accent); border-radius: 2px; }
+
+    /* ===== UTILITIES ===== */
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+    .section-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--clr-accent);
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-family: var(--ff-display);
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--clr-white);
+    }
+    .section-subtitle {
+      font-size: 16px;
+      color: var(--clr-grey);
+      max-width: 560px;
+      margin-top: 12px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+    .btn-primary {
+      background: var(--clr-accent);
+      color: #000;
+    }
+    .btn-primary:hover { background: #d4b878; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(200,169,110,0.35); }
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,0.35);
+      color: var(--clr-white);
+    }
+    .btn-outline:hover { border-color: var(--clr-accent); color: var(--clr-accent); transform: translateY(-2px); }
+
+    /* ===== HEADER ===== */
+    #header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--header-h);
+      z-index: 1000;
+      transition: background var(--transition), box-shadow var(--transition);
+    }
+    #header.transparent { background: transparent; }
+    #header.solid { background: rgba(10,10,10,0.95); box-shadow: 0 1px 0 var(--clr-border); backdrop-filter: blur(12px); }
+    .header-inner {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .logo {
+      font-family: var(--ff-display);
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      color: var(--clr-white);
+    }
+    .logo span { color: var(--clr-accent); }
+    .nav-main {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .nav-main a {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      color: var(--clr-light);
+      transition: color var(--transition);
+      position: relative;
+    }
+    .nav-main a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0;
+      width: 0; height: 1px;
+      background: var(--clr-accent);
+      transition: width var(--transition);
+    }
+    .nav-main a:hover { color: var(--clr-white); }
+    .nav-main a:hover::after { width: 100%; }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .header-actions .btn-cta {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--clr-accent);
+      border: 1px solid var(--clr-accent);
+      padding: 8px 20px;
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+    .header-actions .btn-cta:hover { background: var(--clr-accent); color: #000; }
+    .btn-search, .btn-hamburger {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px; height: 40px;
+      color: var(--clr-light);
+      transition: color var(--transition);
+      background: none;
+      border: none;
+    }
+    .btn-search:hover, .btn-hamburger:hover { color: var(--clr-white); }
+    .btn-hamburger { display: none; }
+
+    /* Mobile Drawer */
+    .mobile-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      z-index: 1100;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s, visibility 0.35s;
+    }
+    .mobile-overlay.open { opacity: 1; visibility: visible; }
+    .mobile-drawer {
+      position: fixed;
+      top: 0; right: -100%;
+      width: min(360px, 100vw);
+      height: 100vh;
+      background: var(--clr-surface);
+      z-index: 1200;
+      display: flex;
+      flex-direction: column;
+      padding: 32px 28px;
+      transition: right 0.4s cubic-bezier(0.4,0,0.2,1);
+    }
+    .mobile-drawer.open { right: 0; }
+    .drawer-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    .drawer-nav a {
+      display: block;
+      font-size: 24px;
+      font-family: var(--ff-display);
+      font-weight: 500;
+      color: var(--clr-light);
+      padding: 14px 0;
+      border-bottom: 1px solid var(--clr-border);
+      transition: color var(--transition);
+    }
+    .drawer-nav a:hover { color: var(--clr-accent); }
+    .drawer-cta { margin-top: 40px; }
+    .btn-close {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px; height: 40px;
+      color: var(--clr-grey);
+    }
+    .btn-close:hover { color: var(--clr-white); }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      height: 100svh;
+      min-height: 600px;
+      overflow: hidden;
+    }
+    .hero-slides { position: absolute; inset: 0; }
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+    .hero-slide.active { opacity: 1; }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      transform: translateY(0px) scale(1.05);
+      transition: transform 6s ease;
+      will-change: transform;
+    }
+    .hero-slide.active .hero-bg { transform: translateY(0px) scale(1); }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        rgba(0,0,0,0.75) 0%,
+        rgba(0,0,0,0.4) 55%,
+        rgba(0,0,0,0.1) 100%
+      );
+    }
+    .hero-content {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 24px;
+      padding-top: var(--header-h);
+    }
+    .hero-content > .container { width: 100%; }
+    .hero-eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--clr-accent);
+      margin-bottom: 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s 0.2s, transform 0.7s 0.2s;
+    }
+    .hero-slide.active .hero-eyebrow { opacity: 1; transform: translateY(0); }
+    .hero-title {
+      font-family: var(--ff-display);
+      font-size: clamp(36px, 5.5vw, 76px);
+      font-weight: 600;
+      line-height: 1.1;
+      max-width: 720px;
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s 0.4s, transform 0.7s 0.4s;
+    }
+    .hero-slide.active .hero-title { opacity: 1; transform: translateY(0); }
+    .hero-desc {
+      font-size: 16px;
+      color: var(--clr-light);
+      max-width: 500px;
+      margin-top: 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s 0.6s, transform 0.7s 0.6s;
+    }
+    .hero-slide.active .hero-desc { opacity: 1; transform: translateY(0); }
+    .hero-btns {
+      display: flex;
+      gap: 16px;
+      margin-top: 36px;
+      flex-wrap: wrap;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s 0.8s, transform 0.7s 0.8s;
+    }
+    .hero-slide.active .hero-btns { opacity: 1; transform: translateY(0); }
+    .hero-indicators {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 10;
+    }
+    .hero-dot {
+      width: 24px; height: 2px;
+      background: rgba(255,255,255,0.35);
+      border-radius: 1px;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    .hero-dot.active { background: var(--clr-accent); width: 48px; }
+    /* Parallax layer */
+    .hero-bg { will-change: transform; }
+
+    /* ===== QUICK ACTIONS ===== */
+    .quick-actions {
+      background: var(--clr-surface);
+      border-top: 1px solid var(--clr-border);
+      border-bottom: 1px solid var(--clr-border);
+      padding: 0;
+    }
+    .qa-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+    }
+    .qa-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      padding: 32px 20px;
+      border-right: 1px solid var(--clr-border);
+      cursor: pointer;
+      transition: background var(--transition);
+      text-align: center;
+    }
+    .qa-item:last-child { border-right: none; }
+    .qa-item:hover { background: rgba(200,169,110,0.06); }
+    .qa-icon {
+      width: 44px; height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--clr-accent);
+    }
+    .qa-icon svg { stroke: currentColor; fill: none; }
+    .qa-label {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--clr-light);
+    }
+
+    /* ===== VEHICLES ===== */
+    .vehicles-section { padding: 100px 0; }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .filter-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .filter-tab {
+      padding: 8px 20px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--clr-grey);
+      border: 1px solid var(--clr-border);
+      border-radius: 2px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .filter-tab.active, .filter-tab:hover { color: var(--clr-accent); border-color: var(--clr-accent); }
+    .vehicles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .vehicle-card {
+      background: var(--clr-surface);
+      border: 1px solid var(--clr-border);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .vehicle-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+    .vehicle-img-wrap {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 16/9;
+      background: var(--clr-surface2);
+    }
+    .vehicle-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .vehicle-card:hover .vehicle-img-wrap img { transform: scale(1.06); }
+    .vehicle-badge {
+      position: absolute;
+      top: 16px; left: 16px;
+      padding: 4px 12px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-radius: 2px;
+    }
+    .badge-new { background: var(--clr-accent); color: #000; }
+    .badge-electric { background: #1a7c4d; color: #fff; }
+    .vehicle-info { padding: 24px; }
+    .vehicle-type {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--clr-accent);
+      margin-bottom: 8px;
+    }
+    .vehicle-name {
+      font-family: var(--ff-display);
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--clr-white);
+    }
+    .vehicle-specs {
+      display: flex;
+      gap: 20px;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--clr-border);
+    }
+    .spec-item { display: flex; flex-direction: column; gap: 2px; }
+    .spec-val {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--clr-white);
+    }
+    .spec-key { font-size: 11px; color: var(--clr-grey); }
+    .vehicle-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid var(--clr-border);
+    }
+    .vehicle-price {
+      font-size: 14px;
+      color: var(--clr-grey);
+    }
+    .vehicle-price strong { color: var(--clr-white); font-size: 16px; }
+    .btn-explore {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--clr-accent);
+      transition: gap var(--transition);
+    }
+    .btn-explore:hover { gap: 14px; }
+    .btn-explore svg { transition: transform var(--transition); }
+    .btn-explore:hover svg { transform: translateX(4px); }
+
+    /* ===== TECH SECTION ===== */
+    .tech-section {
+      padding: 100px 0;
+      background: var(--clr-surface);
+    }
+    .tech-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .tech-visual {
+      position: relative;
+      border-radius: 4px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      background: var(--clr-surface2);
+    }
+    .tech-visual img { width: 100%; height: 100%; object-fit: cover; }
+    .tech-visual-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(200,169,110,0.08) 0%, transparent 60%);
+    }
+    .tech-features { display: flex; flex-direction: column; gap: 32px; margin-top: 40px; }
+    .tech-feature {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .tech-feature-icon {
+      flex-shrink: 0;
+      width: 48px; height: 48px;
+      border: 1px solid var(--clr-border);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--clr-accent);
+    }
+    .tech-feature-body { flex: 1; }
+    .tech-feature-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--clr-white);
+      margin-bottom: 4px;
+    }
+    .tech-feature-desc { font-size: 14px; color: var(--clr-grey); }
+
+    /* ===== EV SECTION ===== */
+    .ev-section {
+      padding: 100px 0;
+      background: linear-gradient(to bottom, var(--clr-bg), #0c1a12, var(--clr-bg));
+    }
+    .ev-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .ev-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2px;
+      margin-top: 40px;
+      background: var(--clr-border);
+    }
+    .ev-stat {
+      background: var(--clr-surface);
+      padding: 28px 20px;
+      text-align: center;
+    }
+    .ev-stat-val {
+      font-family: var(--ff-display);
+      font-size: 40px;
+      font-weight: 700;
+      color: #4ade80;
+      line-height: 1;
+    }
+    .ev-stat-unit { font-size: 14px; color: var(--clr-grey); margin-top: 4px; }
+    .ev-stat-label { font-size: 12px; color: var(--clr-grey); margin-top: 6px; }
+    .ev-visual {
+      position: relative;
+      border-radius: 4px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      background: linear-gradient(135deg, #0c1a12, #051009);
+    }
+    .ev-visual img { width: 100%; height: 100%; object-fit: cover; }
+    .ev-model-label {
+      position: absolute;
+      bottom: 20px; left: 20px;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(74,222,128,0.3);
+      border-radius: 4px;
+      padding: 12px 20px;
+    }
+    .ev-model-name {
+      font-family: var(--ff-display);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--clr-white);
+    }
+    .ev-model-sub { font-size: 12px; color: #4ade80; margin-top: 2px; }
+
+    /* ===== NEWS SECTION ===== */
+    .news-section { padding: 100px 0; }
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .news-card {
+      background: var(--clr-surface);
+      border: 1px solid var(--clr-border);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: transform var(--transition);
+    }
+    .news-card:hover { transform: translateY(-4px); }
+    .news-img {
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      background: var(--clr-surface2);
+    }
+    .news-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .news-card:hover .news-img img { transform: scale(1.05); }
+    .news-body { padding: 24px; }
+    .news-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .news-cat {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--clr-accent);
+      background: rgba(200,169,110,0.1);
+      padding: 3px 10px;
+      border-radius: 2px;
+    }
+    .news-date { font-size: 12px; color: var(--clr-grey); }
+    .news-title {
+      font-family: var(--ff-display);
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.35;
+      color: var(--clr-white);
+      margin-bottom: 12px;
+    }
+    .news-excerpt { font-size: 14px; color: var(--clr-grey); margin-bottom: 20px; line-height: 1.6; }
+    .news-read {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--clr-accent);
+      transition: gap var(--transition);
+    }
+    .news-read:hover { gap: 14px; }
+
+    /* ===== DEALER SECTION ===== */
+    .dealer-section { padding: 100px 0; background: var(--clr-surface); }
+    .dealer-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    .dealer-search {
+      background: var(--clr-surface2);
+      border: 1px solid var(--clr-border);
+      border-radius: 4px;
+      padding: 32px;
+    }
+    .dealer-search select, .dealer-search input {
+      width: 100%;
+      background: var(--clr-bg);
+      border: 1px solid var(--clr-border);
+      color: var(--clr-white);
+      padding: 14px 16px;
+      border-radius: 2px;
+      font-size: 14px;
+      font-family: var(--ff-body);
+      margin-bottom: 12px;
+      outline: none;
+      transition: border-color var(--transition);
+      appearance: none;
+    }
+    .dealer-search select:focus, .dealer-search input:focus {
+      border-color: var(--clr-accent);
+    }
+    .dealer-search select option { background: var(--clr-bg); }
+    .dealer-list { display: flex; flex-direction: column; gap: 16px; margin-top: 20px; }
+    .dealer-item {
+      background: var(--clr-bg);
+      border: 1px solid var(--clr-border);
+      border-radius: 4px;
+      padding: 20px;
+      transition: border-color var(--transition);
+    }
+    .dealer-item:hover { border-color: var(--clr-accent); }
+    .dealer-name {
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--clr-white);
+      margin-bottom: 8px;
+    }
+    .dealer-address { font-size: 13px; color: var(--clr-grey); margin-bottom: 6px; }
+    .dealer-phone { font-size: 13px; color: var(--clr-accent); }
+    .dealer-actions { display: flex; gap: 12px; margin-top: 12px; }
+    .dealer-btn {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border: 1px solid var(--clr-border);
+      border-radius: 2px;
+      color: var(--clr-grey);
+      transition: var(--transition);
+    }
+    .dealer-btn:hover { border-color: var(--clr-accent); color: var(--clr-accent); }
+    .map-placeholder {
+      background: var(--clr-surface2);
+      border: 1px solid var(--clr-border);
+      border-radius: 4px;
+      aspect-ratio: 4/3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      color: var(--clr-grey);
+    }
+    .map-placeholder svg { opacity: 0.3; }
+    .map-placeholder p { font-size: 13px; }
+
+    /* ===== TEST DRIVE SECTION ===== */
+    .testdrive-section {
+      padding: 100px 0;
+      background: linear-gradient(135deg, #0d0d0d 0%, #1a1208 50%, #0d0d0d 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .testdrive-section::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(200,169,110,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .testdrive-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .testdrive-content .section-subtitle { max-width: 420px; }
+    .testdrive-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .td-highlight {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 14px;
+      color: var(--clr-light);
+    }
+    .td-highlight::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--clr-accent);
+      flex-shrink: 0;
+    }
+    .form-card {
+      background: var(--clr-surface);
+      border: 1px solid var(--clr-border);
+      border-radius: 4px;
+      padding: 40px;
+    }
+    .form-title {
+      font-family: var(--ff-display);
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 28px;
+      color: var(--clr-white);
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .form-group.full { grid-column: 1/-1; }
+    .form-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--clr-grey);
+    }
+    .form-input, .form-select {
+      background: var(--clr-bg);
+      border: 1px solid var(--clr-border);
+      color: var(--clr-white);
+      padding: 14px 16px;
+      border-radius: 2px;
+      font-size: 14px;
+      font-family: var(--ff-body);
+      outline: none;
+      transition: border-color var(--transition);
+      appearance: none;
+    }
+    .form-input:focus, .form-select:focus { border-color: var(--clr-accent); }
+    .form-input::placeholder { color: var(--clr-grey); }
+    .form-select option { background: var(--clr-bg); }
+    .form-checkbox-wrap {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .form-checkbox-wrap input[type="checkbox"] {
+      width: 18px; height: 18px;
+      margin-top: 2px;
+      accent-color: var(--clr-accent);
+      flex-shrink: 0;
+    }
+    .form-checkbox-label {
+      font-size: 13px;
+      color: var(--clr-grey);
+    }
+    .form-checkbox-label a { color: var(--clr-accent); text-decoration: underline; }
+    .form-msg {
+      padding: 12px 16px;
+      border-radius: 2px;
+      font-size: 14px;
+      margin-bottom: 16px;
+      display: none;
+    }
+    .form-msg.success { background: rgba(74,222,128,0.1); border: 1px solid rgba(74,222,128,0.3); color: #4ade80; display: block; }
+    .form-msg.error { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.3); color: #ef4444; display: block; }
+    .btn-submit {
+      width: 100%;
+      padding: 16px;
+      background: var(--clr-accent);
+      color: #000;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .btn-submit:hover { background: #d4b878; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(200,169,110,0.3); }
+    .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+    .loading-spinner {
+      width: 16px; height: 16px;
+      border: 2px solid rgba(0,0,0,0.3);
+      border-top-color: #000;
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+      display: none;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #050505;
+      border-top: 1px solid var(--clr-border);
+      padding: 80px 0 32px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 64px;
+    }
+    .footer-brand .logo { font-size: 24px; margin-bottom: 20px; }
+    .footer-brand p { font-size: 14px; color: var(--clr-grey); line-height: 1.7; max-width: 280px; }
+    .footer-social {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .social-link {
+      width: 40px; height: 40px;
+      border: 1px solid var(--clr-border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--clr-grey);
+      font-size: 14px;
+      font-weight: 700;
+      transition: var(--transition);
+    }
+    .social-link:hover { border-color: var(--clr-accent); color: var(--clr-accent); }
+    .footer-col-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--clr-white);
+      margin-bottom: 20px;
+    }
+    .footer-col ul li {
+      margin-bottom: 12px;
+    }
+    .footer-col ul li a {
+      font-size: 14px;
+      color: var(--clr-grey);
+      transition: color var(--transition);
+    }
+    .footer-col ul li a:hover { color: var(--clr-accent); }
+    .footer-contact-item {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin-bottom: 14px;
+      font-size: 14px;
+      color: var(--clr-grey);
+    }
+    .footer-contact-item svg { flex-shrink: 0; margin-top: 2px; color: var(--clr-accent); }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 32px;
+      border-top: 1px solid var(--clr-border);
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-copy { font-size: 13px; color: var(--clr-grey); }
+    .footer-legal {
+      display: flex;
+      gap: 24px;
+    }
+    .footer-legal a {
+      font-size: 13px;
+      color: var(--clr-grey);
+      transition: color var(--transition);
+    }
+    .footer-legal a:hover { color: var(--clr-accent); }
+
+    /* ===== COOKIE BANNER ===== */
+    .cookie-banner {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: var(--clr-surface);
+      border-top: 1px solid var(--clr-border);
+      padding: 20px 24px;
+      z-index: 900;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      transform: translateY(100%);
+      transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+    }
+    .cookie-banner.show { transform: translateY(0); }
+    .cookie-text { font-size: 14px; color: var(--clr-grey); max-width: 700px; }
+    .cookie-text a { color: var(--clr-accent); text-decoration: underline; }
+    .cookie-actions { display: flex; gap: 12px; }
+    .btn-cookie-accept {
+      padding: 10px 24px;
+      background: var(--clr-accent);
+      color: #000;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .btn-cookie-accept:hover { background: #d4b878; }
+    .btn-cookie-decline {
+      padding: 10px 24px;
+      border: 1px solid var(--clr-border);
+      color: var(--clr-grey);
+      font-size: 13px;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .btn-cookie-decline:hover { border-color: var(--clr-grey); color: var(--clr-white); }
+
+    /* ===== BACK TO TOP ===== */
+    .btn-top {
+      position: fixed;
+      bottom: 32px; right: 32px;
+      width: 48px; height: 48px;
+      background: var(--clr-accent);
+      color: #000;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 850;
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.35s, transform 0.35s, background 0.35s, box-shadow 0.35s;
+      pointer-events: none;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-top.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    .btn-top:hover { background: #d4b878; transform: translateY(-4px); box-shadow: 0 8px 24px rgba(200,169,110,0.4); }
+    .btn-top.show:hover { transform: translateY(-4px); }
+
+    /* ===== SCROLL REVEAL ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .vehicles-grid { grid-template-columns: repeat(2, 1fr); }
+      .tech-inner, .ev-inner, .dealer-inner, .testdrive-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-main { display: none; }
+      .btn-hamburger { display: flex; }
+      .qa-grid { grid-template-columns: repeat(3, 1fr); }
+      .qa-item:nth-child(3) { border-right: none; }
+      .qa-item:nth-child(4) { border-top: 1px solid var(--clr-border); }
+      .qa-item:nth-child(5) { border-top: 1px solid var(--clr-border); }
+      .vehicles-grid, .news-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+      .form-row { grid-template-columns: 1fr; }
+      .ev-stats { grid-template-columns: 1fr; }
+      .header-actions .btn-cta { display: none; }
+      .testdrive-inner { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .qa-grid { grid-template-columns: 1fr 1fr; }
+      .qa-item:nth-child(2n) { border-right: none; }
+      .qa-item { border-right: 1px solid var(--clr-border); }
+      .qa-item:nth-child(3), .qa-item:nth-child(4), .qa-item:nth-child(5) {
+        border-top: 1px solid var(--clr-border);
+      }
+      .hero-btns { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* ===== CAR SVG PLACEHOLDER (if no image) ===== */
+    .car-svg-bg {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header id="header" class="transparent">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#" class="logo">NOVA <span>MOTORS</span></a>
+        <nav class="nav-main">
+          <a href="#vehicles">Xe</a>
+          <a href="#testdrive">Mua xe</a>
+          <a href="#tech">Dịch vụ</a>
+          <a href="#tech">Khám phá</a>
+          <a href="#news">Tin tức</a>
+          <a href="#dealers">Về chúng tôi</a>
+        </nav>
+        <div class="header-actions">
+          <a href="#testdrive" class="btn-cta">Đăng ký lái thử</a>
+          <button class="btn-search" aria-label="Tìm kiếm">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+            </svg>
+          </button>
+          <button class="btn-hamburger" id="btnHamburger" aria-label="Menu">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-head">
+      <span class="logo">NOVA <span style="color:var(--clr-accent)">MOTORS</span></span>
+      <button class="btn-close" id="btnClose" aria-label="Đóng">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="drawer-nav">
+      <a href="#vehicles">Xe</a>
+      <a href="#testdrive">Mua xe</a>
+      <a href="#tech">Dịch vụ</a>
+      <a href="#tech">Khám phá</a>
+      <a href="#news">Tin tức</a>
+      <a href="#dealers">Về chúng tôi</a>
+    </nav>
+    <div class="drawer-cta">
+      <a href="#testdrive" class="btn btn-primary" style="width:100%;justify-content:center;">Đăng ký lái thử</a>
+    </div>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-slides" id="heroSlides">
+
+      <!-- Slide 1: NOVA X5 -->
+      <div class="hero-slide active" data-index="0">
+        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1920&q=80');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <div class="container">
+            <div class="hero-eyebrow">SUV Hạng Sang · 2025</div>
+            <h1 class="hero-title">NOVA X5 – Định nghĩa lại<br/>trải nghiệm SUV hạng sang</h1>
+            <p class="hero-desc">Công nghệ tiên tiến, thiết kế tinh tế và hiệu suất mạnh mẽ cho mọi hành trình.</p>
+            <div class="hero-btns">
+              <a href="#vehicles" class="btn btn-primary">Khám phá mẫu xe</a>
+              <a href="#testdrive" class="btn btn-outline">Đăng ký lái thử</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: NOVA S7 -->
+      <div class="hero-slide" data-index="1">
+        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=1920&q=80');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <div class="container">
+            <div class="hero-eyebrow">Sedan Thể Thao · 2025</div>
+            <h1 class="hero-title">NOVA S7 – Mạnh mẽ.<br/>Thanh lịch. Không khoan nhượng.</h1>
+            <p class="hero-desc">Sedan thể thao thuần chủng với hiệu suất vượt trội và đường nét khí động học hoàn hảo.</p>
+            <div class="hero-btns">
+              <a href="#vehicles" class="btn btn-primary">Khám phá mẫu xe</a>
+              <a href="#testdrive" class="btn btn-outline">Đăng ký lái thử</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: NOVA E9 -->
+      <div class="hero-slide" data-index="2">
+        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1676115241505-0d5a74c0e2b1?w=1920&q=80');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <div class="container">
+            <div class="hero-eyebrow">SUV Điện Cao Cấp · 2025</div>
+            <h1 class="hero-title">NOVA E9 – Bước vào kỷ<br/>nguyên di chuyển mới</h1>
+            <p class="hero-desc">SUV thuần điện hạng sang với phạm vi 620 km và sạc nhanh 20 phút từ 10% đến 80%.</p>
+            <div class="hero-btns">
+              <a href="#ev" class="btn btn-primary">Khám phá NOVA E9</a>
+              <a href="#testdrive" class="btn btn-outline">Đăng ký lái thử</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Dots indicator -->
+    <div class="hero-indicators" id="heroIndicators">
+      <button class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
+      <button class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
+      <button class="hero-dot" data-slide="2" aria-label="Slide 3"></button>
+    </div>
+  </section>
+
+  <!-- ===== QUICK ACTIONS ===== -->
+  <section class="quick-actions">
+    <div class="container">
+      <div class="qa-grid">
+        <a href="#testdrive" class="qa-item">
+          <div class="qa-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v5"/><circle cx="15.5" cy="17.5" r="2.5"/><circle cx="5.5" cy="17.5" r="2.5"/>
+            </svg>
+          </div>
+          <span class="qa-label">Đăng ký lái thử</span>
+        </a>
+        <a href="#vehicles" class="qa-item">
+          <div class="qa-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"/><path d="M7 15h0M12 15h0M17 15h0M7 11h10M7 8h10"/>
+            </svg>
+          </div>
+          <span class="qa-label">Tìm xe có sẵn</span>
+        </a>
+        <a href="#tech" class="qa-item">
+          <div class="qa-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
+          </div>
+          <span class="qa-label">Đặt lịch dịch vụ</span>
+        </a>
+        <a href="#dealers" class="qa-item">
+          <div class="qa-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <span class="qa-label">Tìm đại lý</span>
+        </a>
+        <a href="#testdrive" class="qa-item">
+          <div class="qa-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.5 12 19.79 19.79 0 0 1 1.15 3.18a2 2 0 0 1 2-2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9a16 16 0 0 0 6.91 6.91l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </div>
+          <span class="qa-label">Liên hệ tư vấn</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VEHICLES SECTION ===== -->
+  <section class="vehicles-section" id="vehicles">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="section-tag">Bộ sưu tập</span>
+          <h2 class="section-title">Khám phá những mẫu xe<br/>mới nhất của chúng tôi</h2>
+        </div>
+        <div class="filter-tabs" id="filterTabs">
+          <button class="filter-tab active" data-filter="all">Tất cả</button>
+          <button class="filter-tab" data-filter="suv">SUV</button>
+          <button class="filter-tab" data-filter="sedan">Sedan</button>
+          <button class="filter-tab" data-filter="electric">Xe điện</button>
+          <button class="filter-tab" data-filter="sport">Thể thao</button>
+        </div>
+      </div>
+
+      <div class="vehicles-grid" id="vehiclesGrid">
+
+        <!-- NOVA X5 -->
+        <article class="vehicle-card reveal" data-category="suv">
+          <div class="vehicle-img-wrap">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80" alt="NOVA X5 SUV hạng sang" loading="lazy" />
+            <span class="vehicle-badge badge-new">Mới 2025</span>
+          </div>
+          <div class="vehicle-info">
+            <div class="vehicle-type">SUV Hạng Sang</div>
+            <h3 class="vehicle-name">NOVA X5</h3>
+            <div class="vehicle-specs">
+              <div class="spec-item">
+                <span class="spec-val">3.0L</span>
+                <span class="spec-key">Động cơ</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-val">375 HP</span>
+                <span class="spec-key">Công suất</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-val">4.8s</span>
+                <span class="spec-key">0–100 km/h</span>
+              </div>
+            </div>
+            <div class="vehicle-footer">
+              <div class="vehicle-price">Từ <strong>2.199.000.000 ₫</strong></div>
+              <a href="#" class="btn-explore">
+                Khám phá
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- NOVA S7 -->
+        <article class="vehicle-card reveal" data-category="sedan sport" style="transition-delay:0.1s">
+          <div class="vehicle-img-wrap">
+            <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80" alt="NOVA S7 Sedan thể thao" loading="lazy" />
+            <span class="vehicle-badge badge-new">Mới 2025</span>
+          </div>
+          <div class="vehicle-info">
+            <div class="vehicle-type">Sedan Thể Thao</div>
+            <h3 class="vehicle-name">NOVA S7</h3>
+            <div class="vehicle-specs">
+              <div class="spec-item">
+                <span class="spec-val">4.0L</span>
+                <span class="spec-key">Động cơ</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-val">540 HP</span>
+                <span class="spec-key">Công suất</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-val">3.8s</span>
+                <span class="spec-key">0–100 km/h</span>
+              </div>
+            </div>
+            <div class="vehicle-footer">
+              <div class="vehicle-price">Từ <strong>1.899.000.000 ₫</strong></div>
+              <a href="#" class="btn-explore">
+                Khám phá
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- NOVA E9 -->
+        <article class="vehicle-card reveal" data-category="suv electric" style="transition-delay:0.2s">
+          <div class="vehicle-img-wrap">
+            <img src="https://images.unsplash.com/photo-1676115241505-0d5a74c0e2b1?w=800&q=80" alt="NOVA E9 SUV thuần điện" loading="lazy" />
+            <span class="vehicle-badge badge-electric">Thuần Điện</span>
+          </div>
+          <div class="vehicle-info">
+            <div class="vehicle-type" style="color:#4ade80">SUV Thuần Điện</div>
+            <h3 class="vehicle-name">NOVA E9</h3>
+            <div class="vehicle-specs">
+              <div class="spec-item">
+                <span class="spec-val">620 km</span>
+                <span class="spec-key">Tầm hoạt động</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-val">612 HP</span>
+                <span class="spec-key">Công suất</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-val">3.6s</span>
+                <span class="spec-key">0–100 km/h</span>
+              </div>
+            </div>
+            <div class="vehicle-footer">
+              <div class="vehicle-price">Từ <strong>2.599.000.000 ₫</strong></div>
+              <a href="#ev" class="btn-explore">
+                Khám phá
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TECHNOLOGY SECTION ===== -->
+  <section class="tech-section" id="tech">
+    <div class="container">
+      <div class="tech-inner">
+        <div class="tech-visual reveal">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80" alt="Công nghệ nội thất NOVA MOTORS" loading="lazy" />
+          <div class="tech-visual-overlay"></div>
+        </div>
+        <div class="reveal" style="transition-delay:0.15s">
+          <span class="section-tag">Công nghệ</span>
+          <h2 class="section-title">Công nghệ tạo<br/>nên khác biệt</h2>
+          <p class="section-subtitle">Mỗi chi tiết trong xe NOVA MOTORS được thiết kế để tối ưu hóa trải nghiệm lái và sự thoải mái.</p>
+          <div class="tech-features">
+            <div class="tech-feature">
+              <div class="tech-feature-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                  <circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+                </svg>
+              </div>
+              <div class="tech-feature-body">
+                <div class="tech-feature-title">Hệ thống hỗ trợ lái tiên tiến</div>
+                <div class="tech-feature-desc">NOVA Drive Assist với 28 cảm biến xung quanh, hỗ trợ lái bán tự động cấp độ 2+.</div>
+              </div>
+            </div>
+            <div class="tech-feature">
+              <div class="tech-feature-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+                </svg>
+              </div>
+              <div class="tech-feature-body">
+                <div class="tech-feature-title">Màn hình kỹ thuật số thế hệ mới</div>
+                <div class="tech-feature-desc">Hệ thống NOVA Cockpit với màn hình cong 34 inch độ phân giải 4K và AR HUD.</div>
+              </div>
+            </div>
+            <div class="tech-feature">
+              <div class="tech-feature-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <div class="tech-feature-body">
+                <div class="tech-feature-title">Kết nối thông minh</div>
+                <div class="tech-feature-desc">NOVA Connect với 5G, OTA update, điều khiển từ xa qua ứng dụng và tích hợp AI.</div>
+              </div>
+            </div>
+            <div class="tech-feature">
+              <div class="tech-feature-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                  <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/>
+                </svg>
+              </div>
+              <div class="tech-feature-body">
+                <div class="tech-feature-title">Nội thất cao cấp</div>
+                <div class="tech-feature-desc">Da Nappa Italy, gỗ thật ốp nội thất, hệ thống âm thanh Meridian 23 loa, ghế massage.</div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:32px">
+            <a href="#" class="btn btn-outline">Tìm hiểu thêm</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EV SECTION ===== -->
+  <section class="ev-section" id="ev">
+    <div class="container">
+      <div class="ev-inner">
+        <div class="reveal">
+          <span class="section-tag" style="color:#4ade80">Xe điện</span>
+          <h2 class="section-title">Bước vào kỷ nguyên<br/>di chuyển mới</h2>
+          <p class="section-subtitle">NOVA E9 – SUV thuần điện hạng sang với công nghệ pin thế hệ tiếp theo và hiệu suất phi thường.</p>
+          <div class="ev-stats">
+            <div class="ev-stat">
+              <div class="ev-stat-val">620</div>
+              <div class="ev-stat-unit">km</div>
+              <div class="ev-stat-label">Tầm hoạt động tối đa</div>
+            </div>
+            <div class="ev-stat">
+              <div class="ev-stat-val">20</div>
+              <div class="ev-stat-unit">phút</div>
+              <div class="ev-stat-label">Sạc nhanh 10% đến 80%</div>
+            </div>
+            <div class="ev-stat">
+              <div class="ev-stat-val">100%</div>
+              <div class="ev-stat-unit"></div>
+              <div class="ev-stat-label">Không phát thải khi vận hành</div>
+            </div>
+          </div>
+          <div style="margin-top:32px;display:flex;gap:16px;flex-wrap:wrap">
+            <a href="#" class="btn btn-primary">Khám phá NOVA E9</a>
+            <a href="#testdrive" class="btn btn-outline">Lái thử ngay</a>
+          </div>
+        </div>
+        <div class="ev-visual reveal" style="transition-delay:0.15s">
+          <img src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=900&q=80" alt="NOVA E9 xe điện hạng sang" loading="lazy" />
+          <div class="ev-model-label">
+            <div class="ev-model-name">NOVA E9</div>
+            <div class="ev-model-sub">SUV Thuần Điện · 2025</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEWS SECTION ===== -->
+  <section class="news-section" id="news">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="section-tag">Truyền thông</span>
+          <h2 class="section-title">Tin tức &amp; Sự kiện</h2>
+        </div>
+        <a href="#" class="btn btn-outline" style="font-size:12px;padding:10px 24px;">Xem tất cả</a>
+      </div>
+      <div class="news-grid">
+
+        <article class="news-card reveal">
+          <div class="news-img">
+            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=600&q=80" alt="NOVA MOTORS giới thiệu SUV mới" loading="lazy" />
+          </div>
+          <div class="news-body">
+            <div class="news-meta">
+              <span class="news-cat">Ra mắt sản phẩm</span>
+              <span class="news-date">15 Tháng 10, 2025</span>
+            </div>
+            <h3 class="news-title">NOVA MOTORS giới thiệu thế hệ SUV mới tại Việt Nam</h3>
+            <p class="news-excerpt">Dòng SUV mới nhất của NOVA MOTORS chính thức ra mắt thị trường Việt Nam với hàng loạt công nghệ tiên tiến và thiết kế đột phá.</p>
+            <a href="#" class="news-read">
+              Đọc thêm
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="news-card reveal" style="transition-delay:0.1s">
+          <div class="news-img">
+            <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=600&q=80" alt="Trải nghiệm xe điện thế hệ mới" loading="lazy" />
+          </div>
+          <div class="news-body">
+            <div class="news-meta">
+              <span class="news-cat">Xe điện</span>
+              <span class="news-date">10 Tháng 10, 2025</span>
+            </div>
+            <h3 class="news-title">Trải nghiệm công nghệ xe điện thế hệ mới</h3>
+            <p class="news-excerpt">Hành trình 1.200 km không cần sạc – thực sự hay chỉ là marketing? Chúng tôi đã thực sự lái thử NOVA E9 xuyên Việt.</p>
+            <a href="#" class="news-read">
+              Đọc thêm
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="news-card reveal" style="transition-delay:0.2s">
+          <div class="news-img">
+            <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=600&q=80" alt="Khai trương showroom NOVA MOTORS" loading="lazy" />
+          </div>
+          <div class="news-body">
+            <div class="news-meta">
+              <span class="news-cat">Sự kiện</span>
+              <span class="news-date">5 Tháng 10, 2025</span>
+            </div>
+            <h3 class="news-title">Khai trương showroom flagship tại TP. Hồ Chí Minh</h3>
+            <p class="news-excerpt">Showroom NOVA MOTORS flagship tại quận 1 chính thức mở cửa với không gian trưng bày đẳng cấp quốc tế và dịch vụ khách hàng 5 sao.</p>
+            <a href="#" class="news-read">
+              Đọc thêm
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DEALER SECTION ===== -->
+  <section class="dealer-section" id="dealers">
+    <div class="container">
+      <div class="dealer-inner">
+        <div>
+          <span class="section-tag">Showroom</span>
+          <h2 class="section-title reveal">Tìm đại lý<br/>gần bạn</h2>
+          <p class="section-subtitle reveal" style="transition-delay:0.1s">Hệ thống showroom NOVA MOTORS trải rộng khắp cả nước với đội ngũ tư vấn chuyên nghiệp.</p>
+          <div class="dealer-search reveal" style="margin-top:32px;transition-delay:0.15s">
+            <select id="citySelect" aria-label="Chọn tỉnh thành">
+              <option value="">Chọn tỉnh/thành phố</option>
+              <option value="hcm">TP. Hồ Chí Minh</option>
+              <option value="hn">Hà Nội</option>
+              <option value="dn">Đà Nẵng</option>
+              <option value="hp">Hải Phòng</option>
+              <option value="ct">Cần Thơ</option>
+            </select>
+            <input type="text" placeholder="Tìm theo tên hoặc địa chỉ..." aria-label="Tìm kiếm showroom" />
+          </div>
+          <div class="dealer-list" id="dealerList">
+            <div class="dealer-item">
+              <div class="dealer-name">NOVA MOTORS – Quận 1, TP.HCM</div>
+              <div class="dealer-address">📍 89 Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh</div>
+              <div class="dealer-phone">📞 (028) 3822 9900</div>
+              <div style="font-size:12px;color:var(--clr-grey);margin-top:4px">Thứ 2 – CN: 8:00 – 20:00</div>
+              <div class="dealer-actions">
+                <button class="dealer-btn">Xem bản đồ</button>
+                <button class="dealer-btn">Đặt lịch hẹn</button>
+              </div>
+            </div>
+            <div class="dealer-item">
+              <div class="dealer-name">NOVA MOTORS – Cầu Giấy, Hà Nội</div>
+              <div class="dealer-address">📍 172 Xuân Thủy, Cầu Giấy, Hà Nội</div>
+              <div class="dealer-phone">📞 (024) 3754 8800</div>
+              <div style="font-size:12px;color:var(--clr-grey);margin-top:4px">Thứ 2 – CN: 8:00 – 20:00</div>
+              <div class="dealer-actions">
+                <button class="dealer-btn">Xem bản đồ</button>
+                <button class="dealer-btn">Đặt lịch hẹn</button>
+              </div>
+            </div>
+            <div class="dealer-item">
+              <div class="dealer-name">NOVA MOTORS – Đà Nẵng</div>
+              <div class="dealer-address">📍 45 Nguyễn Văn Linh, Hải Châu, Đà Nẵng</div>
+              <div class="dealer-phone">📞 (0236) 3668 800</div>
+              <div style="font-size:12px;color:var(--clr-grey);margin-top:4px">Thứ 2 – CN: 8:00 – 19:00</div>
+              <div class="dealer-actions">
+                <button class="dealer-btn">Xem bản đồ</button>
+                <button class="dealer-btn">Đặt lịch hẹn</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="map-placeholder reveal" style="transition-delay:0.2s">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
+            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>
+          </svg>
+          <p>Bản đồ sẽ được tích hợp<br/>Google Maps sau khi cấu hình API</p>
+          <button class="dealer-btn">Mở Google Maps</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TEST DRIVE FORM ===== -->
+  <section class="testdrive-section" id="testdrive">
+    <div class="container">
+      <div class="testdrive-inner">
+        <div class="reveal">
+          <span class="section-tag">Trải nghiệm</span>
+          <h2 class="section-title">Cảm nhận NOVA MOTORS<br/>trên mọi cung đường</h2>
+          <p class="section-subtitle">Đăng ký lái thử ngay hôm nay và trải nghiệm sự khác biệt của công nghệ và đẳng cấp NOVA MOTORS.</p>
+          <div class="testdrive-highlights">
+            <div class="td-highlight">Lái thử miễn phí tại showroom gần nhất</div>
+            <div class="td-highlight">Tư vấn tài chính và bảo hiểm chuyên nghiệp</div>
+            <div class="td-highlight">Xác nhận lịch hẹn trong vòng 2 giờ</div>
+            <div class="td-highlight">Dịch vụ đưa đón tại nhà (khu vực nội thành)</div>
+          </div>
+        </div>
+        <div class="form-card reveal" style="transition-delay:0.15s">
+          <h3 class="form-title">Đăng ký lái thử</h3>
+          <div class="form-msg" id="formMsg"></div>
+          <form id="testDriveForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="fullName">Họ và tên *</label>
+                <input class="form-input" type="text" id="fullName" name="fullName" placeholder="Nguyễn Văn A" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="phone">Số điện thoại *</label>
+                <input class="form-input" type="tel" id="phone" name="phone" placeholder="0901 234 567" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Email</label>
+                <input class="form-input" type="email" id="email" name="email" placeholder="example@email.com" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="city">Tỉnh/Thành phố *</label>
+                <select class="form-select" id="city" name="city" required>
+                  <option value="">Chọn tỉnh thành</option>
+                  <option>TP. Hồ Chí Minh</option>
+                  <option>Hà Nội</option>
+                  <option>Đà Nẵng</option>
+                  <option>Hải Phòng</option>
+                  <option>Cần Thơ</option>
+                  <option>Khác</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="model">Mẫu xe quan tâm *</label>
+                <select class="form-select" id="model" name="model" required>
+                  <option value="">Chọn mẫu xe</option>
+                  <option>NOVA X5 – SUV Hạng Sang</option>
+                  <option>NOVA S7 – Sedan Thể Thao</option>
+                  <option>NOVA E9 – SUV Thuần Điện</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="dealer">Đại lý mong muốn</label>
+                <select class="form-select" id="dealer" name="dealer">
+                  <option value="">Chọn đại lý</option>
+                  <option>TP.HCM – Quận 1</option>
+                  <option>Hà Nội – Cầu Giấy</option>
+                  <option>Đà Nẵng – Hải Châu</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-checkbox-wrap">
+              <input type="checkbox" id="agreePolicy" name="agreePolicy" required />
+              <label class="form-checkbox-label" for="agreePolicy">
+                Tôi đồng ý với <a href="#">chính sách bảo mật</a> và cho phép NOVA MOTORS liên hệ tư vấn.
+              </label>
+            </div>
+            <button type="submit" class="btn-submit" id="submitBtn">
+              <div class="loading-spinner" id="spinner"></div>
+              <span id="submitText">Đăng ký lái thử</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <div class="logo">NOVA <span>MOTORS</span></div>
+          <p>Thương hiệu xe hạng sang với triết lý thiết kế tối giản, công nghệ tiên tiến và cam kết phát triển bền vững vì tương lai.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Facebook">f</a>
+            <a href="#" class="social-link" aria-label="Instagram">in</a>
+            <a href="#" class="social-link" aria-label="YouTube">▶</a>
+            <a href="#" class="social-link" aria-label="LinkedIn">li</a>
+          </div>
+        </div>
+        <!-- Dòng xe -->
+        <div class="footer-col">
+          <div class="footer-col-title">Dòng xe</div>
+          <ul>
+            <li><a href="#">NOVA X5 – SUV Hạng Sang</a></li>
+            <li><a href="#">NOVA S7 – Sedan Thể Thao</a></li>
+            <li><a href="#">NOVA E9 – SUV Thuần Điện</a></li>
+            <li><a href="#">Xe có sẵn</a></li>
+            <li><a href="#">So sánh mẫu xe</a></li>
+          </ul>
+        </div>
+        <!-- Dịch vụ -->
+        <div class="footer-col">
+          <div class="footer-col-title">Dịch vụ</div>
+          <ul>
+            <li><a href="#testdrive">Đăng ký lái thử</a></li>
+            <li><a href="#">Đặt lịch bảo dưỡng</a></li>
+            <li><a href="#">Tư vấn tài chính</a></li>
+            <li><a href="#">Bảo hiểm xe</a></li>
+            <li><a href="#">Phụ tùng chính hãng</a></li>
+            <li><a href="#">Tuyển dụng</a></li>
+          </ul>
+        </div>
+        <!-- Liên hệ -->
+        <div class="footer-col">
+          <div class="footer-col-title">Liên hệ</div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>89 Nguyễn Huệ, Quận 1,<br/>TP. Hồ Chí Minh</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.5 12 19.79 19.79 0 0 1 1.15 3.18a2 2 0 0 1 2-2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9a16 16 0 0 0 6.91 6.91l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>1800 1234 (Miễn phí)</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>contact@novamotors.vn</span>
+          </div>
+        </div>
+      </div>
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2025 NOVA MOTORS. Tất cả quyền được bảo lưu.</div>
+        <div class="footer-legal">
+          <a href="#">Chính sách bảo mật</a>
+          <a href="#">Điều khoản sử dụng</a>
+          <a href="#">Cookie</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button class="btn-top" id="btnTop" aria-label="Về đầu trang">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <!-- ===== COOKIE BANNER ===== -->
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Thông báo cookie">
+    <p class="cookie-text">
+      Chúng tôi sử dụng cookie để cải thiện trải nghiệm của bạn. Bằng cách tiếp tục, bạn đồng ý với <a href="#">chính sách cookie</a> của chúng tôi.
+    </p>
+    <div class="cookie-actions">
+      <button class="btn-cookie-decline" id="btnCookieDecline">Từ chối</button>
+      <button class="btn-cookie-accept" id="btnCookieAccept">Chấp nhận tất cả</button>
+    </div>
+  </div>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // ─── HEADER SCROLL + PARALLAX + BACK TO TOP (merged) ────────────────────
+    const header = document.getElementById('header');
+    const btnTopEl = document.getElementById('btnTop');
+
+    window.addEventListener('scroll', () => {
+      const scrolled = window.scrollY;
+
+      // Header solid/transparent
+      if (scrolled > 60) {
+        header.classList.remove('transparent');
+        header.classList.add('solid');
+      } else {
+        header.classList.remove('solid');
+        header.classList.add('transparent');
+      }
+
+      // Back to top
+      btnTopEl.classList.toggle('show', scrolled > 400);
+
+      // Parallax on hero backgrounds (preserve scale via inline style)
+      const heroSection = document.getElementById('hero');
+      if (heroSection && scrolled < heroSection.offsetHeight) {
+        const offset = scrolled * 0.25;
+        document.querySelectorAll('.hero-bg').forEach(bg => {
+          // Keep scale(1.05) for inactive, scale(1) for active
+          const isActive = bg.closest('.hero-slide').classList.contains('active');
+          const scale = isActive ? 1 : 1.05;
+          bg.style.transform = `translateY(${offset}px) scale(${scale})`;
+        });
+      }
+    }, { passive: true });
+
+    // ─── MOBILE DRAWER ───────────────────────────────────────────────────────
+    const overlay = document.getElementById('mobileOverlay');
+    const drawer = document.getElementById('mobileDrawer');
+    const btnHamburger = document.getElementById('btnHamburger');
+    const btnClose = document.getElementById('btnClose');
+
+    function openDrawer() {
+      overlay.classList.add('open');
+      drawer.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDrawer() {
+      overlay.classList.remove('open');
+      drawer.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    btnHamburger.addEventListener('click', openDrawer);
+    btnClose.addEventListener('click', closeDrawer);
+    overlay.addEventListener('click', closeDrawer);
+    drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
+
+    // ─── HERO CAROUSEL ───────────────────────────────────────────────────────
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.hero-dot');
+    let currentSlide = 0;
+    let autoSlide;
+
+    function goToSlide(n) {
+      const prevSlide = slides[currentSlide];
+      dots[currentSlide].classList.remove('active');
+      prevSlide.classList.remove('active');
+
+      currentSlide = (n + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+      dots[currentSlide].classList.add('active');
+
+      // Update inline transform scale after transition (parallax uses inline styles)
+      const offset = window.scrollY * 0.25;
+      document.querySelectorAll('.hero-bg').forEach(bg => {
+        const isActive = bg.closest('.hero-slide').classList.contains('active');
+        const scale = isActive ? 1 : 1.05;
+        bg.style.transform = `translateY(${offset}px) scale(${scale})`;
+      });
+    }
+
+    function startAuto() {
+      autoSlide = setInterval(() => goToSlide(currentSlide + 1), 6000);
+    }
+    function resetAuto() { clearInterval(autoSlide); startAuto(); }
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        goToSlide(+dot.dataset.slide);
+        resetAuto();
+      });
+    });
+    startAuto();
+
+    // ─── VEHICLE FILTER ──────────────────────────────────────────────────────
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const vehicleCards = document.querySelectorAll('.vehicle-card');
+
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const filter = tab.dataset.filter;
+        vehicleCards.forEach(card => {
+          const cats = card.dataset.category || '';
+          const show = filter === 'all' || cats.includes(filter);
+          card.style.display = show ? '' : 'none';
+        });
+      });
+    });
+
+    // ─── SCROLL REVEAL ───────────────────────────────────────────────────────
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    // ─── TEST DRIVE FORM ─────────────────────────────────────────────────────
+    const form = document.getElementById('testDriveForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const submitText = document.getElementById('submitText');
+    const spinner = document.getElementById('spinner');
+    const formMsg = document.getElementById('formMsg');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      formMsg.className = 'form-msg';
+      formMsg.textContent = '';
+
+      // Client-side validation
+      const fullName = form.fullName.value.trim();
+      const phone = form.phone.value.trim();
+      const city = form.city.value;
+      const model = form.model.value;
+      const agreed = form.agreePolicy.checked;
+
+      if (!fullName) return showError('Vui lòng nhập họ và tên.');
+      if (!phone || !/^(0|\+84)[0-9]{8,10}$/.test(phone.replace(/\s/g, '')))
+        return showError('Số điện thoại không hợp lệ.');
+      if (!city) return showError('Vui lòng chọn tỉnh/thành phố.');
+      if (!model) return showError('Vui lòng chọn mẫu xe quan tâm.');
+      if (!agreed) return showError('Vui lòng đồng ý với chính sách bảo mật.');
+
+      // Loading state
+      submitBtn.disabled = true;
+      spinner.style.display = 'block';
+      submitText.textContent = 'Đang xử lý...';
+
+      // Mock API (2 second delay)
+      await new Promise(r => setTimeout(r, 2000));
+
+      // Success
+      spinner.style.display = 'none';
+      submitBtn.disabled = false;
+      submitText.textContent = 'Đăng ký lái thử';
+      formMsg.textContent = '✓ Đăng ký thành công! Chúng tôi sẽ liên hệ trong vòng 2 giờ. Cảm ơn bạn!';
+      formMsg.className = 'form-msg success';
+      form.reset();
+    });
+
+    function showError(msg) {
+      formMsg.textContent = msg;
+      formMsg.className = 'form-msg error';
+      formMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    // ─── BACK TO TOP ─────────────────────────────────────────────────────────
+    document.getElementById('btnTop').addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ─── COOKIE BANNER ───────────────────────────────────────────────────────
+    const cookieBanner = document.getElementById('cookieBanner');
+    if (!localStorage.getItem('nova_cookie_consent')) {
+      setTimeout(() => cookieBanner.classList.add('show'), 1500);
+    }
+    document.getElementById('btnCookieAccept').addEventListener('click', () => {
+      localStorage.setItem('nova_cookie_consent', 'accepted');
+      cookieBanner.classList.remove('show');
+    });
+    document.getElementById('btnCookieDecline').addEventListener('click', () => {
+      localStorage.setItem('nova_cookie_consent', 'declined');
+      cookieBanner.classList.remove('show');
+    });
+  </script>
+</body>
+</html>
+
